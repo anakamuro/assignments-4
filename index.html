@@ -61,6 +61,7 @@
               action="index.html"
               method="get"
               onsubmit="return validate();"
+              id="form"
             >
               <div
                 class="formData">
@@ -91,6 +92,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  pattern=".+@.+\..+"
                 /><br>
               </div>
               <div
@@ -201,6 +203,7 @@
               </div>
               <input
                 class="btn-submit"
+                id="btn-submit"
                 type="submit"
                 class="button"
                 value="Go"
