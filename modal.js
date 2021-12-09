@@ -35,10 +35,10 @@ const email = document.getElementById('email');
 const birthdate = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 
-
-btnSubmit.addEventListener('click', function(event){
-
-
+if(!isNaN(first.value) && !isNaN(last.value)){
+  alert("name should be character");
+  return false;
+ }
   if(first.value == ""){
   alert("You need to write your first name");
   return false;
@@ -48,14 +48,24 @@ btnSubmit.addEventListener('click', function(event){
     return false;
    }
    if(email.value == ""){
-    message.push("You need to write your email");
+    alert("You need to write your email");
+    return false;
+   }
+   var at = email.indexOf("@");
+   var dot = email.lastIndexzOf(".");
+
+   if(at<1 || dot < at + 2 || dot + 2 >= email.length){
+     alert("Not a valid email");
+     return false;
    }
    if(quantity.value == ""){
-    message.push("You need to write the quantity");
+    alert("You need to write the quantity");
+    return false;
    }
    if(birthdate.value == ""){
-    message.push("You need to write your birthdate");
+    alert("You need to write your birthdate");
+    return false;
    }
-})
 }
+
 
