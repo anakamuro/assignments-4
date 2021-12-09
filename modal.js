@@ -20,14 +20,14 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
-const form = documemt.getElementById('form');
+const form = document.getElementById('form');
 
 form.addEventListener("submit", (e)=>{
 e.preventDefault();
 alert('Thank you for your submission');
 })
 
-window.onload = function(){
+function validate(){
 const btnSubmit = document.getElementById('btn-submit');
 const first = document.getElementById('first');
 const last = document.getElementById('last');
@@ -38,12 +38,14 @@ const quantity = document.getElementById('quantity');
 
 btnSubmit.addEventListener('click', function(event){
 
-  let message = [];
+
   if(first.value == ""){
-   message.push("You need to write your first name");
+  alert("You need to write your first name");
+  return false;
   }
   if(last.value == ""){
-    message.push("You need to write your last name");
+    alert("You need to write your last name");
+    return false;
    }
    if(email.value == ""){
     message.push("You need to write your email");
