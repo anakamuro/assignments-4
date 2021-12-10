@@ -11,7 +11,7 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const closeBtn = document.getElementsByClassName(".close")[0];
+const closeBtn = document.getElementById("close");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -44,6 +44,17 @@ const email = document.getElementById('email');
 const birthdate = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 
+if((document.getElementById('checkbox1').checked == false)){
+  alert("You need to check the agreement")
+}
+if(quantity.value == ""){
+  alert("You need to write the quantity");
+  return false;
+ }
+if((document.getElementById('location1').checked == false) && (document.getElementById('location2').checked == false) && (document.getElementById('location3').checked == false) && (document.getElementById('location4').checked == false) && (document.getElementById('location5').checked == false) && (document.getElementById('location6').checked == false)){
+  alert("you need to choose your location");
+  return false;
+}
 if(!isNaN(first.value) && !isNaN(last.value)){
   alert("name should be character");
   return false;
@@ -77,4 +88,3 @@ if(!isNaN(first.value) && !isNaN(last.value)){
    }
 }
 
-export { validate };
