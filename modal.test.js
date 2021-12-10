@@ -1,5 +1,5 @@
-const {validate} = require("./modal.js");
-
+import {validate} from "./modal.js";
+import {describe, expect} from "@jest/globals";
 
 
 describe('Testing validate function', () => {
