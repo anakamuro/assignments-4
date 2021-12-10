@@ -77,4 +77,4 @@ if(!isNaN(first.value) && !isNaN(last.value)){
    }
 }
 
-
+export { validate };

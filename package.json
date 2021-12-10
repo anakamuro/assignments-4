@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "npm run lite",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "type": "module"
   },
   "author": "",
   "license": "ISC",
