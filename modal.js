@@ -34,6 +34,7 @@ const form = document.getElementById('form');
 form.addEventListener("submit", (e)=>{
 e.preventDefault();
 alert('Thank you for your submission');
+closeModal();
 })
 
 function validate(){
