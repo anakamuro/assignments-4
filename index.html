@@ -56,6 +56,7 @@
         <div class="content">
           <span id="close" class="close"></span>
           <div class="modal-body">
+            <div id="thank-you">Thank you for submitting registeration details</div>
             <form
               name="reserve"
               action="index.html"
@@ -64,18 +65,20 @@
               id="form"
             >
               <div
-                class="formData">
+                class="formData success error">
                 <label>First Name</label><br>
                 <input
+                  data-error="hello"
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
                   minlength="2"
                 /><br>
+                <small></small>
               </div>
               <div
-                class="formData">
+                class="formData success error">
                 <label>Last Name</label><br>
                 <input
                   class="text-control"
@@ -83,9 +86,10 @@
                   id="last"
                   name="last"
                 /><br>
+                <small></small>
               </div>
               <div
-                class="formData">
+                class="formData success error">
                 <label>Email</label><br>
                 <input
                   class="text-control"
@@ -94,9 +98,10 @@
                   name="email"
                   pattern=".+@.+\..+"
                 /><br>
+                <small></small>
               </div>
               <div
-                class="formData">
+                class="formData success error">
                 <label>Birthdate</label><br>
                 <input
                   class="text-control"
@@ -104,11 +109,13 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <small></small>
               </div>
               <div
-                class="formData">
+                class="formData success error">
                 <label>How many tournaments have you attended? </label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99"><br/>
+                <small></small>
               </div>
               <p class="text-label">Which location?</p>
               <div
@@ -178,22 +185,25 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
-                >
+                ><br/>
+                <small id="location"></small>
               </div>
 
               <div
-                class="formData">
+                class="formData success error">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
                   checked
                 />
+                <small id="must"></small>
                 <label class="checkbox2-label" for="checkbox1" id="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
                 <br>
+                
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
