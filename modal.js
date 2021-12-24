@@ -86,7 +86,6 @@ const emailValue = document.getElementById('email').value.trim();
 const birthDateValue = document.getElementById('birthdate').value.trim();
 const quantityValue = document.getElementById('quantity').value.trim();
 //const checkbox1Value = document.getElementById('checkbox1').value.trim();
-var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-])+.([a-z]+)([a-z]+)?$/
 
 if(firstValue == ""){
   document.getElementById('first').style.borderColor ="red";
@@ -119,9 +118,6 @@ if(firstValue == ""){
    if(emailValue == ""){
     document.getElementById('email').style.borderColor ="red";
     errorHandler(email, 'Your email can not be blank');
-   } else if (!regx.text(emailValue)){
-    document.getElementById('email').style.borderColor ="red";
-    errorHandler(email, 'Your email is not valid');
    }  else {
     document.getElementById('first').style.borderColor ="black";
     successHandler(email);
