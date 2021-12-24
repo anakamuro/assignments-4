@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="refresh" content="time; URL=index.html" />
     <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
@@ -52,11 +53,10 @@
         </button>
       </div>
 
-      <div class="bground">
+      <div class="bground bground2">
         <div class="content">
           <span id="close" class="close"></span>
           <div class="modal-body">
-            <div id="thank-you">Thank you for submitting registeration details</div>
             <form
               name="reserve"
               action="index.html"
@@ -119,7 +119,7 @@
               </div>
               <p class="text-label">Which location?</p>
               <div
-                class="formData">
+                class="formData success error">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -186,7 +186,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 ><br/>
-                <small id="location"></small>
+                <small id="place">You must write your location</small>
               </div>
 
               <div
@@ -197,11 +197,11 @@
                   id="checkbox1"
                   checked
                 />
-                <small id="must"></small>
                 <label class="checkbox2-label" for="checkbox1" id="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
+                <small id="pass">You must sign the agreement</small>
                 <br>
                 
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
@@ -219,6 +219,19 @@
                 value="Go"
               />
             </form>
+            <div id="form2" class="form2">
+            <div id="thank-you">Thank you for<br/>
+               submitting your <br/>
+               registeration details</div>
+            <input
+            class="btn-submit2"
+            id="btn-submit2"
+            type="submit"
+            class="button"
+            value="Close"
+          />
+          </div>
+
           </div>
         </div>
       </div>
@@ -229,5 +242,10 @@
       </p>
     </footer>
     <script src="modal.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+   
   </body>
 </html>
