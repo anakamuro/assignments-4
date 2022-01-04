@@ -90,7 +90,7 @@ const quantityValue = document.getElementById('quantity').value.trim();
 if(firstValue == ""){
   document.getElementById('first').style.borderColor ="red";
   errorHandler(first, 'First Name can not be blank');
-} else if (firstValue >= 2) {
+} else if (firstValue <= 2) {
   document.getElementById('first').style.borderColor ="red";
   errorHandler(first, 'First Name must be at least 2 characters');
   } else if (!isNaN(firstValue)) {
@@ -104,7 +104,7 @@ if(firstValue == ""){
   if(lastValue == ""){
     document.getElementById('last').style.borderColor ="red";
     errorHandler(last, 'Last Name can not be blank');
-  } else if (lastValue >= 2) {
+  } else if (lastValue <= 2) {
     document.getElementById('last').style.borderColor ="red";
     errorHandler(last, 'Last Name must be at least 2 characters');
   } else if (!isNaN(lastValue)) {
@@ -135,7 +135,7 @@ if(firstValue == ""){
     errorHandler(quantity, 'Your need to write how many times you attended');
   } else if (isNaN(quantityValue)) {
     document.getElementById('quantity').style.borderColor ="red";
-    errorHandler(last, 'Last Name can not be number');
+    errorHandler(quantity, 'quantity must be number');
    } else {
     document.getElementById('quantity').style.borderColor ="black";
     successHandler(quantity);

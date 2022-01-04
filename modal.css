@@ -51,12 +51,12 @@ input#first.text-control  {
 .errorBorder{
   border: 2px solid red;
 }
-.formData.success input {
+/*.formData.success input {
   border: 2px solid black;
 }
 .formData.error input {
   border: 2px solid black;
-}
+}*/
 .formData small {
   visibility: hidden;
   position: relative;
